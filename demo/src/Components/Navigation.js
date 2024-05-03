@@ -34,9 +34,8 @@ return (
   <>
     <nav className="navigation-bar">
       <ul>
-      
-        <li><NavLink to="/form" activeClassName="active">Form</NavLink></li>
-        <li><NavLink to="/details" activeClassName="active">Details</NavLink></li>
+      <li><NavLink to="/form" activeClassName="active">Form</NavLink></li>
+      <li><NavLink to="/details" activeClassName="active">Details</NavLink></li>
         {isLoggedIn && (
           <li className="logout-button"><button onClick={logout}>Logout</button></li>
         )}
