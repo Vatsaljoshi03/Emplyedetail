@@ -1,102 +1,111 @@
-/* Form.css */
-
 .form-container {
-
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .employee-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form-field {
   display: flex;
   flex-direction: column;
 }
 
-.form-field {
-  margin-bottom: 20px;
-}
-
-label {
-  margin-bottom: 8px;
+.form-field label {
+  padding : 10px 0px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="date"],
-select {
-  width: 95%;
-  padding: 12px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+.form-field input,
+.form-field select {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-select:focus {
-  outline: none;
-  border-color: #6d9bf1;
+.form-field select {
+  appearance: none;
 }
 
-.select-wrapper {
-  position: relative;
+.form-field input[type="file"] {
+  border: none;
 }
 
-.select-wrapper::after {
-  content: "\25BC"; /* Unicode character for down arrow */
-  font-size: 16px;
-  color: #555;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
+.form-field img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+  max-width: 100%;
 }
 
 .error-message {
-  color: #f44336;
+  color: red;
   font-size: 14px;
   margin-top: 5px;
-  font-style: italic;
+}
+.remove-button {
+  padding: 10px 14px; /* Adjust padding to make the button smaller */
+  font-size: 14px; /* Adjust font size to make the button text smaller */
+  background-color: #dc3545; /* Red color for the remove button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.remove-button:hover {
+  background-color: #c82333; /* Darker red color on hover */
 }
 
 .submit-button {
-  background-color: #f01f1f;
-  color: white;
-  padding: 12px 24px;
+  padding: 5px 10px; /* Adjust padding to make the button smaller */
+  font-size: 14px; /* Adjust font size to make the button text smaller */
+  background-color: #dc3545; /* Red color for the remove button */
+  color: #fff; /* White text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
+  transition: background-color 0.3s;
 }
 
 .submit-button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-.add-remove-button {
-  background-color: #c32519;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 5px;
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .employee-form {
+    grid-template-columns: 1fr;
+  }
 }
 
-.add-remove-button:hover {
-  background-color: #d32f2f;
+/* For screens between 600px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .form-container {
+    max-width: 80%;
+    padding: 15px;
+  }
+}
+
+/* For screens larger than 900px */
+@media (min-width: 901px) {
+  .form-container {
+    max-width: 600px;
+    padding: 20px;
+  }
 }

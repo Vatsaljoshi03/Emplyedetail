@@ -32,9 +32,9 @@ const logout = async () => {
 
 return (
   <>
-    <nav>
+    <nav className="navigation-bar">
       <ul>
-        <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
+      
         <li><NavLink to="/form" activeClassName="active">Form</NavLink></li>
         <li><NavLink to="/details" activeClassName="active">Details</NavLink></li>
         {isLoggedIn && (

@@ -1,8 +1,6 @@
-/* Details.css */
-
 .table-container {
   margin: 20px;
-  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
 }
 
 .employee-table {
@@ -46,8 +44,6 @@
   border-radius: 7px;
   padding: 8px 16px;
   cursor: pointer;
-  padding: 10px;
-
 }
 
 .employee-table td button:hover {
@@ -84,10 +80,7 @@ button:focus {
   outline: none;
 }
 
-
-
 .employee-table td button.edit-button {
-  /* Add your styles for the edit button here */
   background-color: #757575;
   color: #fff;
   border: none;
@@ -95,8 +88,6 @@ button:focus {
   padding: 8px 16px;
   cursor: pointer;
   margin-left: 8px;
-  padding: 10px;
-  margin: 15px;
 }
 
 .employee-table td button.edit-button:hover {
@@ -104,15 +95,22 @@ button:focus {
 }
 
 .delete-icon {
-  color: red; /* Change color to red */
-  cursor: pointer; /* Add cursor pointer */
-
+  color: red;
+  cursor: pointer;
 }
 
-/* Styling for edit icon */
 .edit-icon {
-  color: blue; /* Change color to blue */
-  cursor: pointer; /* Add cursor pointer */
+  color: blue;
+  cursor: pointer;
 }
 
 
+
+/* Media Query for Responsive Layout */
+@media only screen and (max-width: 1280px) {
+  .employee-table th,
+  .employee-table td {
+    white-space: nowrap; /* Prevent line breaks */
+    min-width: 100px; /* Set a minimum width for each cell */
+  }
+}

@@ -1,5 +1,6 @@
 /* Profile.css */
 
+/* Base styles */
 .profile-container {
   display: flex;
   justify-content: center;
@@ -7,7 +8,8 @@
 }
 
 .profile-box {
-  width: 600px; /* Adjust the width as needed */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 600px; /* Set a maximum width */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -16,23 +18,30 @@
 
 .profile-heading {
   font-size: 24px;
-  margin-bottom: 20px;
-  
+  margin-bottom: 10px;
 }
 
-.profile-details{
-
+.profile-details {
   margin-top: 30px;
-  margin-left: 20px;
+  text-align: start;
+  /* padding: 20px; */
+  padding-right: 50px;
 }
-
 
 .profile-details-container {
   display: flex;
+  flex-direction: row;
+  margin-right: 10px; /* Default layout for larger screens */
 }
 
 .profile-photo {
-  margin-right: 20px;
+
+  margin: 0 auto; /* Center the image */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+.profile-info {
+  text-align: center; /* Center the profile details */
 }
 
 .profile-maindetails-container {
@@ -53,3 +62,52 @@
   font-size: 18px;
   margin-top: 20px;
 }
+
+
+
+/* Media Query for phones */
+@media screen and (max-width: 600px) {
+  .profile-box {
+    width: 95%; /* Adjust the width for smaller screens */
+  }
+
+  .profile-details-container {
+    flex-direction: column; /* Change to column layout for phones */
+  }
+
+  .profile-details {
+    margin-top: 60px;
+    margin-left: 0px;
+  }
+
+  .profile-photo {
+    margin-left: 70px;
+    width: 150px; /* Adjust image size for smaller screens */
+    height: 150px;
+    border-radius: 75px; /* Make the border radius half of the width and height */
+  }
+}
+
+/* Media Query for screens with maximum width of 400px */
+@media screen and (max-width: 400px) {
+  .profile-box {
+    width: 95%; /* Adjust the width for even smaller screens */
+  }
+
+  .profile-details-container {
+    flex-direction: column; /* Change to column layout for very small screens */
+  }
+
+  .profile-details {
+    margin-top: 60px;
+    margin-left: 0px;
+  }
+
+  .profile-photo {
+    margin-left: 50px;
+    width: 120px; /* Further adjust image size for very small screens */
+    height: 120px;
+    border-radius: 60px; /* Make the border radius half of the width and height */
+  }
+}
+

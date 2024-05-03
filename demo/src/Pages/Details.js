@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import useCalculate from '../Hooks/useCalculate';
-import './Details.css'; // Import the CSS file
+import './Details.css'; 
 import { Link } from 'react-router-dom';
-import { RiDeleteBinLine, RiEdit2Line } from 'react-icons/ri'; // Importing delete and edit icons
-import Swal from 'sweetalert2'; // Import sweetalert2
+import Swal from 'sweetalert2'; 
 
 const Details = () => {
   const [formData, setFormData] = useState([]);
@@ -72,8 +71,8 @@ const Details = () => {
               <td>{data.technology}</td>
               <td>{data.possition}</td>
               <td>
-                <RiDeleteBinLine onClick={() => handleDelete(index)} className="delete-icon" size={20} />
-                <Link to={`/edited/${data.id}`}><RiEdit2Line className="edit-icon" size={20} /></Link>
+                <button onClick={() => handleDelete(index)} className="delete-button">Delete</button>
+                <Link to={`/edited/${data.id}`}><button className="edit-button">Edit</button></Link>
               </td>
             </tr>
           ))}

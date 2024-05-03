@@ -1,49 +1,63 @@
 .edit-form {
-  max-width: 900px;
+  width: 70%;
   margin: 0 auto;
+}
+
+.details-box {
+  background-color: #f9f9f9;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  margin-top: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.edit-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.edit-form label {
+.field-label {
   display: block;
   margin-bottom: 10px;
 }
 
-.edit-form input[type="text"],
-.edit-form select {
-  width: 95%;
-  padding: 10px;
+.input-field,
+.select-field {
+  width: 90%;
+  padding: 8px;
   margin-top: 5px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.edit-form button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #007bff;
+
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-item {
+  flex: 1;
+}
+
+.changes-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  color: #fff;
+  border-radius: 4px;
   cursor: pointer;
-}
-
-.edit-form button:hover {
-  background-color: #0056b3;
 }
 
 .loading {
   text-align: center;
   margin-top: 50px;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .details-box {
+    padding: 30px;
+  }
+
+  .field-item {
+    flex-basis: 100%;
+  }
 }

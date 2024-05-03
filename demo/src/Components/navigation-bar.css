@@ -1,5 +1,4 @@
-
-nav {
+.navigation-bar {
   background-color: #fff8f8;
   color: rgb(31, 4, 4);
   padding: 10px;
@@ -42,16 +41,15 @@ a.active {
   border-radius: 4px;
   padding: 8px 16px;
   cursor: pointer;
-  /* margin-left: 100px; */
-
 }
 
 .logout-button button:hover {
   background-color: #d32f2f; /* Darker red color on hover */
 }
+
 /* Media Query for responsive design */
-@media screen and (max-width: 768px) {
-  nav {
+@media screen and (max-width: 300px) {
+  .navigation-bar {
     flex-direction: column;
     align-items: flex-start;
   }

@@ -331,39 +331,34 @@ const Form = () => {
 
 
 
-
                 <div>
-                    <select name="country" value={formData.country} onChange={handleChange}>
-                        <option value="">Select Country</option>
-                        <option value="India">India</option>
-                        <option value="Israil">Israel</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="China">China</option>
-                    </select>
-                    {errors.country && <span className="error-message">{errors.country}</span>}
-
-
-
-                    <select name="state" value={formData.state} onChange={handleChange}>
-                        <option value="">Select State</option>
-                        <option value="Gujrat">Gujarat</option>
-                        <option value="Zion">Zion</option>
-                        <option value="Islamabad">Islamabad</option>
-                        <option value="Yunnan">Yunnan</option>
-                    </select>
-                    {errors.state && <span className="error-message">{errors.state}</span>}
-
-
-
-                    <select name="city" value={formData.city} onChange={handleChange}>
-                        <option value="">Select City</option>
-                        <option value="Surat">Surat</option>
-                        <option value="Haifa">Haifa</option>
-                        <option value="Lahor">Lahor</option>
-                        <option value="Wuhan">Wuhan</option>
-                    </select>
-                    {errors.city && <span className="error-message">{errors.city}</span>}
-                </div>
+                <select name="country" value={formData.country} onChange={handleChange} className="form-select">
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="Israil">Israel</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="China">China</option>
+                </select>
+                {errors.country && <span className="error-message">{errors.country}</span>}
+            
+                <select name="state" value={formData.state} onChange={handleChange} className="form-select">
+                    <option value="">Select State</option>
+                    <option value="Gujrat">Gujarat</option>
+                    <option value="Zion">Zion</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Yunnan">Yunnan</option>
+                </select>
+                {errors.state && <span className="error-message">{errors.state}</span>}
+            
+                <select name="city" value={formData.city} onChange={handleChange} className="form-select">
+                    <option value="">Select City</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Haifa">Haifa</option>
+                    <option value="Lahor">Lahor</option>
+                    <option value="Wuhan">Wuhan</option>
+                </select>
+                {errors.city && <span className="error-message">{errors.city}</span>}
+            </div>
 
                 <div className="form-field">
                     <label>Pincode</label>
@@ -399,24 +394,25 @@ const Form = () => {
                 </div>
 
                 <div>
-                    <select name="technology" value={formData.technology} onChange={handleChange}>
-                        <option >Technology</option>
-                        <option value="Frontend Developer">Frontend Developer</option>
-                        <option value="Backend Developer">Backend Developer</option>
-                        <option value="Devops">Devops</option>
-                        <option value="Full-Stack">Full-Stack</option>
-                    </select>
-                    {errors.technology && <span className="error-message">{errors.technology}</span>}
-
-                    <select name="possition" value={formData.possition} onChange={handleChange}>
-                        <option value="">Position</option>
-                        <option value="Entry-Level">Entry-Level</option>
-                        <option value="Mid-Level">Mid-Level</option>
-                        <option value="Senior-Level">Senior-Level</option>
-                        <option value="Executive-Level">Executive-Level</option>
-                    </select>
-                    {errors.possition && <span className="error-message">{errors.possition}</span>}
-                </div>
+                <select name="technology" value={formData.technology} onChange={handleChange} className="form-select">
+                    <option value="">Technology</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Devops">Devops</option>
+                    <option value="Full-Stack">Full-Stack</option>
+                </select>
+                {errors.technology && <span className="error-message">{errors.technology}</span>}
+            
+                <select name="possition" value={formData.possition} onChange={handleChange} className="form-select">
+                    <option value="">Position</option>
+                    <option value="Entry-Level">Entry-Level</option>
+                    <option value="Mid-Level">Mid-Level</option>
+                    <option value="Senior-Level">Senior-Level</option>
+                    <option value="Executive-Level">Executive-Level</option>
+                </select>
+                {errors.possition && <span className="error-message">{errors.possition}</span>}
+            </div>
+            
 
 
 
@@ -447,13 +443,13 @@ const Form = () => {
                                 onChange={(e) => handleAdd(e, index)}
                             />
                             <span>Total Experience: {experience.totalExperience}</span>
-                            {index > 0 && <button type="button" className="submit-button" onClick={() => removeExperience(index)}>Remove</button>}
+                            {index > 0 && <button type="button" className="remove-button" onClick={() => removeExperience(index)}>Remove</button>}
                         </div>
                     ))}
-                    <button type="button" className="submit-button" onClick={addExperience}>Add</button>
+                 
                 </div>
 
-
+                <button type="button" className="submit-button" onClick={addExperience}>Add</button>
 
                 <button type="submit" className="submit-button" >Submit</button>
             </form>
